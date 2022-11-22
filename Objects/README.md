@@ -117,3 +117,31 @@ import _ from 'lodash';
 const obj = {};
 const value = _.get(obj, 'one.two.three', 'defaultValue'); // 'defaultValue'
 ```
+
+
+**Task #7 - fill**
+
+
+Реализуйте и экспортируйте по умолчанию функцию, которая заполняет объект данными из другого объекта по разрешенному списку ключей. Параметры:
+
+1) Исходный объект
+2) Список ключей которые нужно заменить
+3) Данные, которые нужно сливать в исходный объект В случае, когда список ключей пустой, нужно сливать все данные полностью.
+
+```
+const company3 = {
+  name: null,
+  state: 'moderating',
+};
+
+const data = {
+  name: 'Hexlet',
+  state: 'published',
+};
+
+fill(company3, ['name'], data);
+// {
+//   name: 'Hexlet',
+//   state: 'moderating',
+// }
+```
