@@ -15,7 +15,7 @@ const data3 = {
 const get = (data, keys) => {
 	let res = data;
 	for (const key of keys) {
-		res = res[key] || null;
+		res = (Object.hasOwn(res, key)) ? res[key] : null;
 	}
 	return res;
 };
