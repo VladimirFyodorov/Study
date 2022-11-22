@@ -4,11 +4,11 @@ const data2 = {
   os: 'linux',
 };
 
-const pick = (data2, params) => {
+const pick = (data, keys) => {
 	const res = {};
-	for (const param of params) {
-		if (data2[param]) {
-			res[param] = data2[param];
+	for (const key of keys) {
+		if (Object.hasOwn(data, key)) {
+			res[key] = data2[key];
 		}
 	}
 

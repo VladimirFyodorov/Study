@@ -79,3 +79,41 @@ const data2 = {
 
 pick(data2, ['user']); // { user: 'ubuntu' }
 ```
+
+
+**Task #6 - get**
+
+Реализуйте и экспортируйте функцию, которая извлекает из объекта любой глубины вложенности значение по указанным ключам. Параметры:
+
+исходный объект
+цепочка ключей (массив), по которой ведётся поиск значения В случае, когда добраться до значения невозможно, возвращается null.
+
+```
+const data3 = {
+  user: 'ubuntu',
+  hosts: {
+    0: {
+      name: 'web1',
+    },
+    1: {
+      name: 'web2',
+      null: 3,
+      active: false,
+    },
+  },
+};
+
+get(data3, ['user', 'ubuntu']); // null
+get(data3, ['hosts', 1, 'name']); // 'web2'
+get(data3, ['hosts', 0]); // { name: 'web1' }
+```
+
+
+Альтернатива get в библиотеке lodash:
+
+```
+import _ from 'lodash';
+
+const obj = {};
+const value = _.get(obj, 'one.two.three', 'defaultValue'); // 'defaultValue'
+```
