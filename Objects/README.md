@@ -58,3 +58,20 @@ const text1 = 'another one sentence with strange Words words';
 countWords(text1);
 // => { another: 1, one: 1, sentence: 1, with: 1, strange: 1, words: 2 }
 ```
+
+**Task #5 - pick**
+
+Реализуйте и экспортируйте функцию, которая формирует из переданного объекта другой объект, включающий только указанные свойства. Параметры:
+
+1) Исходный объект
+2) Массив имен свойств
+
+```
+const data2 = {
+  user: 'ubuntu',
+  cores: 4,
+  os: 'linux',
+};
+
+pick(data2, ['user']); // { user: 'ubuntu' }
+```

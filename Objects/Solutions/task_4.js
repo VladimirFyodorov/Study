@@ -1,9 +1,11 @@
-const text1 = 'another one sentence with strange Words words';
+const text1 = 'another one sentence with strange Words words   ';
 
 const countWords = (text1) => {
 	const res = {};
-	for (const word of text1.split(' ')) {
-		res[word.toLowerCase()] = (res[word.toLowerCase()] || 0) + 1;
+	for (const word of text1.toLowerCase().split(' ')) {
+		if (word.trim()) {
+			res[word.trim()] = (res[word.trim()] || 0) + 1;
+		}
 	}
 
 	return res;
