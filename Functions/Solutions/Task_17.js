@@ -1,12 +1,3 @@
-// const rollDieRes = {
-// 		1: 4,
-// 		2: 3,
-// 		3: 6,
-// 		4: 5,
-// 		5: 9,
-// 		6: 5,
-// };
-
 const rollDie = () => {
 	return Math.ceil(Math.random()*7);
 };
@@ -44,12 +35,15 @@ const displayHistogram = (num, rollDie) => {
 		for (let column = 0; column < 6; column++) {
 			resStr += res[column][row];
 		}
-		resStr += '\n';
+		resStr = resStr.slice(0, -1);
+		resStr = resStr.trimEnd() + '\n';
 	}
+	resStr = resStr.slice(0, -1);
 	return resStr;
 };
 
 export default displayHistogram;
+
 
 console.log(displayHistogram(32, rollDie));
 // =>                 28%
