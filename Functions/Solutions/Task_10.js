@@ -1,6 +1,7 @@
 const sequenceSum = (n1, n2) => {
 	if (n1 > n2) return NaN;
-	return (n1 === n2) ? n1 : n1 + sequenceSum(n1 + 1, n2);
+	if (n1 === n2) return n1;
+	return n1 + sequenceSum(n1 + 1, n2);
 };
 
 console.log(sequenceSum(1, 5)); // 1 + 2 + 3 + 4 + 5 = 15
