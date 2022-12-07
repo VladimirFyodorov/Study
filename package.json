@@ -1,3 +1,10 @@
 {
-    "type": "module"
+    "type": "module",
+    "scripts": {
+        "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
+        "test-coverage": "NODE_OPTIONS=--experimental-vm-modules npx jest --coverage"
+    },
+    "devDependencies": {
+        "jest": "^29.3.1"
+    }
 }
