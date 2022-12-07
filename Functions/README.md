@@ -143,7 +143,7 @@ getGirlFriends(users);
 // ];
 ```
 
-**Task 8 - groupBy**
+**Task #8 - groupBy**
 
 Реализуйте и экспортируйте по умолчанию функцию для группировки объектов по заданному свойству. Функция принимает аргументами массив объектов и название свойства для группировки. Она должна возвращать объект, где ключ - это значение по заданному свойству, а значение - массив с данными, подходящими для группы.
 
@@ -165,4 +165,30 @@ groupBy(students, 'mark');
 //     { name: "Ramsey", class: "A", mark: 4 },
 //   ],
 // }
+```
+
+
+**Task #9 - getFreeDomainsCount**
+
+Реализуйте и экспортируйте по умолчанию функцию, которая принимает на вход список емейлов, а возвращает количество емейлов, расположенных на каждом бесплатном домене. Список бесплатных доменов хранится в константе freeEmailDomains.
+
+```
+const emails = [
+    'info@gmail.com',
+    'info@yandex.ru',
+    'info@hotmail.com',
+    'mk@host.com',
+    'support@hexlet.io',
+    'key@yandex.ru',
+    'sergey@gmail.com',
+    'vovan@gmail.com',
+    'vovan@hotmail.com',
+];
+ 
+getFreeDomainsCount(emails);
+// {
+//   'gmail.com': 3,
+//   'yandex.ru': 2,
+//   'hotmail.com': 2,
+// };
 ```
