@@ -82,6 +82,7 @@ getY(point); // 8
 
 
 Экспортируйте функции makeRectangle(point, width, height) и containsOrigin(rectangle).
+
 ````
 // Создание прямоугольника:
 // p - левая верхняя точка
@@ -102,7 +103,7 @@ containsOrigin(rectangle); // false
 
 rectangle2 = makeRectangle(makeDecartPoint(-4, 3), 5, 4);
 containsOrigin(rectangle2); // true
-```
+````
 
 Подкасказки:
 
