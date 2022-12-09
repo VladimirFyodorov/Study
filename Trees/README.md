@@ -209,8 +209,7 @@ const tree = {
   ],
 };
  
-const result = changeClass(tree, 'old-class', 'new-class');
-// Результат:
+changeClass(tree, 'old-class', 'new-class');
 // {
 //   name: 'div',
 //   type: 'tag-internal',
@@ -232,3 +231,14 @@ const result = changeClass(tree, 'old-class', 'new-class');
 // }
 ```
 
+## Task #9 - flatten
+
+Реализуйте и экспортируйте по умолчанию функцию, которая делает плоским вложенный массив.
+
+Для решения задачи нельзя использовать готовые методы для выравнивания массивов.
+
+```
+const list = [1, 2, [3, 5], [[4, 3], 2]];
+ 
+flatten(list); // [1, 2, 3, 5, 4, 3, 2]
+```
