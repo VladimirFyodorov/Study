@@ -9,6 +9,8 @@ Function.prototype.delay = function(ms) {
 	// return (...args) => setTimeout(() => someFn(...args), ms)
 	// or
 	return (...args) => setTimeout(() => this.call(this, ...args), ms)
+	// or
+	// return (...args) => setTimeout(() => this.apply(this, args), ms)
 };
 
 const f = someFn.delay(500);
