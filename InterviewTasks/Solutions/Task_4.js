@@ -3,7 +3,7 @@ const obj2 = { bar: 'foo', some: 'some' };
 
 const updateObj = (obj1, obj2) => {
 	const newObj = { ...obj1 };
-	for (const key of Object.keys(obj1)) {
+	for (const key in obj1) {
 		if (Object.hasOwn(obj2, key)) {
 			newObj[key] = obj2[key];
 		}
