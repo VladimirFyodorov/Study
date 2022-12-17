@@ -72,4 +72,13 @@ const arr = [6.1, 4.2, 6.3];
 groupBy(arr, Math.floor); // { '4': [4.2], '6': [6.1, 6.3] }
 ```
 
+## Task #6 - isPalindrome
+
+Реализуйте функцию, которая проверяет является ли слово палиндромом.
+
+```
+isPalindrome('ababa'); // true
+isPalindrome('ababab'); // false
+```
+
 
