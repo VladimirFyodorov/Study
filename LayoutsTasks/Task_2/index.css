@@ -1,12 +1,12 @@
 @font-face {
-	font-weight: 700;
-	font-family: "Cormorant";
+	font-weight: bold;
+	font-family: Cormorant;
 	src: url("./assets/fonts/Cormorant-Bold.ttf");
 }
 
 @font-face {
-	font-weight: 400;
-	font-family: "Cormorant";
+	font-weight: normal;
+	font-family: Cormorant;
 	src: url("./assets/fonts/Cormorant-Regular.ttf");
 }
 
@@ -16,7 +16,7 @@ body {
 	margin: 0 auto;
 	padding: 50px 0 100px;
 
-	font: 16px/1.5 400, sans-serif;
+	font: 16px/1.5  normal, sans-serif;
 
 	background-color: #ebebeb;
 }
@@ -39,7 +39,7 @@ img {
 	color: #333;
 	font-size: 30px;
 	line-height: normal;
-	font-family: "Cormorant", serif;
+	font-family: Cormorant, serif;
 
 	letter-spacing: 15px;
 	text-transform: uppercase;
@@ -79,7 +79,7 @@ img {
 .interview-header {
 	font-size: 50px;
 	line-height: 1.2;
-	font-family: "Cormorant", serif;
+	font-family: Cormorant, serif;
 	font-weight: bold;
 }
 
