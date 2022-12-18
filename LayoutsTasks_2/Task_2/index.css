@@ -1,0 +1,39 @@
+:root {
+  --red: #f44336;
+  --green: #4caf50;
+  --blue: #2196f3;
+  --side: 200px;
+}
+
+body {
+  width: 600px;
+  height: 400px;
+  margin: 0;
+}
+
+.square-red {
+  background-color: var(--red);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--side);
+  width: var(--side);
+}
+
+.square-green {
+  background-color: var(--green);
+  position: absolute;
+  top: var(--side);
+  left: var(--side);
+  height: var(--side);
+  width: var(--side);
+}
+
+.square-blue {
+  background-color: var(--blue);
+  position: absolute;
+  top: 0;
+  left: calc(var(--side)*2);
+  height: var(--side);
+  width: var(--side);
+}
