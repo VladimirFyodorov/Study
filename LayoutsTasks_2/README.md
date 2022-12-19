@@ -1,3 +1,7 @@
+# Projects
+## Project #1 - Timeline
+Создайте таймлайн зананный через список с псевдо элементами
+
 # Tasks
 
 ## Task #1 - Relative positioning
