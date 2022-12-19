@@ -1,0 +1,21 @@
+.circle {
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+}
+
+.circle-blue {
+  background: blue;
+  z-index: 1;
+
+  top: 150px;
+}
+
+.circle-red {
+  background: red;
+  z-index: 2;
+  opacity: 0.5;
+}
