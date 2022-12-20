@@ -1,0 +1,24 @@
+/* BEGIN (write your solution here) */
+.left-aside {
+  width: 200px;
+  background-color: #d32f2f; 
+  min-height: 50vh;
+}
+
+.right-aside {
+  width: 350px;
+  background-color: #1976d2; 
+  min-height: 50vh;
+}
+
+.content-side {
+  background-color: #388e3c;
+  flex-grow: 1;
+  min-height: 50vh;
+}
+
+/* END */
+
+.d-flex {
+  display: flex;
+}
