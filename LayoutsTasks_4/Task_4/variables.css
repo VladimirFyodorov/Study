@@ -1,0 +1,15 @@
+:root {
+  --main-bg: #7e57c2;
+  --main-bg-print: #ffff;
+  --terminal-bg: #263238;
+  --terminal-bg-print: #ffff;
+  --red: #ff5f56;
+  --yellow: #ffbd2e;
+  --green: #27c93f;
+  --highlight-tag: #ff5370;
+  --highlight-tag-print: #c62828;
+  --highlight-attr: #ffcb6b;
+  --highlight-attr-print: #936315;
+  --highlight-string: #c3e88d;
+  --highlight-string-print: #2e7d32;
+}

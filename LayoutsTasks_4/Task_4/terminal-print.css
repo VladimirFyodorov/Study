@@ -1,0 +1,25 @@
+/* BEGIN (write your solution here) */
+@media print {
+  body {
+    background: var(--main-bg-print);
+  }
+
+  .terminal {
+    color: #000;
+    background: var(--terminal-bg-print);
+    border: 1px solid #000;
+  }
+
+  .code-tag {
+    color: var(--highlight-tag-print);
+  }
+  
+  .code-attr {
+    color: var(--highlight-attr-print);
+  }
+  
+  .code-string {
+    color: var(--highlight-string-print);
+  }
+}
+/* END */
