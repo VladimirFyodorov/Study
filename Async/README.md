@@ -187,3 +187,10 @@ wait(100).then(() => console.log('time is over!'));
 ```
 Экспортируйте функцию по умолчанию.
 
+## Task #12 - exchange
+Реализуйте и экспортируйте асинхронную функцию exchange(), которая обменивает содержимое двух файлов.
+```
+import { exchange } from './file.js';
+ 
+exchange('/myfile1', '/myfile2');
+```
