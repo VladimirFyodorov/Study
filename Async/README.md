@@ -177,3 +177,13 @@ getDirectorySize('/usr/local/bin').then(console.log);
 * path.join - конструирует пути
 * fsPromises.stat - информация о файле
 * _.sumBy - нахождение суммы в массиве
+
+## Task #11 - timer
+Реализуйте таймер в виде промиса. Функция должна принимать на вход количество миллисекунд и возвращать промис.
+```
+import wait from './timer.js';
+ 
+wait(100).then(() => console.log('time is over!'));
+```
+Экспортируйте функцию по умолчанию.
+
