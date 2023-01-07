@@ -161,3 +161,19 @@ getTypes(['/etc', '/etc/hosts', '/undefined']).then(console.log);
 ### Подсказки
 * fsPromises.stat - информация о файле или директории. Для проверки на директорию используйте метод isDirectory.
 * Методы then и catch не меняют сам промис, а возвращают новый
+
+## Task #10 - getDirectorySize
+
+Реализуйте и экспортируйте асинхронную функцию getDirectorySize(), которая считает размер переданной директории (не включая поддиректории).
+
+Пример:
+```
+import { getDirectorySize } from './file.js';
+ 
+getDirectorySize('/usr/local/bin').then(console.log);
+```
+### Подсказка
+* fsPromises.readdir - чтение содержимого директории
+* path.join - конструирует пути
+* fsPromises.stat - информация о файле
+* _.sumBy - нахождение суммы в массиве
