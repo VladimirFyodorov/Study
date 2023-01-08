@@ -434,3 +434,42 @@ console.log(result); // 'Hello, world!'
 * описание стандарта, который имплементируется в упражнении
 * курс "Синхронная асинхронность", чуть глубже погружающий в тему
 * курс "Автоматное программирование" о конечных автоматах, чем является промис
+
+## Task #21 - Promise: catch
+CustomPromise.js
+
+Это испытание является продолжением предыдущего и расширяет объект промиса добавлением метода catch(onReject). Вы научитесь перехватывать и обрабатывать ошибки.
+
+Реализуйте в классе CustomPromise конструктор, принимающий колбек executor(resolve, reject), методы then(onFulfill, onReject) и catch(onReject), и обеспечьте корректный перехват ошибок с передачей в соответствующие обработчики.
+
+Алгоритм
+Обработчик reject(data) экзекьютора вызывается только при выбросе ошибки. Решение, в целом, похоже на всё то что уже рассматривалось ранее, но реализация метода catch(onReject) отличается от then(onFulfill).
+
+Можно копировать решение учителя из предыдущего испытания и расширять его. В решении должны отсутствовать встроенные Promise и ключевое слово async. Только таймеры и вызовы функций из функций.
+
+Примеры использования
+```
+import CustomPromise from '../CustomPromise.js';
+
+const resolvedPromise = new CustomPromise((resolve) => resolve('Hello, world!'));
+resolvedPromise
+  .then((value) => {
+    console.log(value); // 'Hello, world!'
+    throw new Error('Goodbye, world!');
+  })
+  .catch((err) => console.error(err));  // 'Error: Goodbye, world!'
+
+
+const rejectedPromise = new CustomPromise((_, reject) => reject('Hello, world!'));
+const result = await rejectedPromise
+  .catch((rejectMessage) => rejectMessage.split(' '))
+  .then(([firstWord]) => firstWord + ' Pepe!');
+console.log(result); // Hello, Pepe!
+```
+### Подсказки
+Изучите кейсы использования в тестах, они опираются на возможности промисов из документации.
+
+Если почувствуете, что нужны дополнительные материалы:
+* описание стандарта, который имплементируется в упражнении
+* курс "Синхронная асинхронность", чуть глубже погружающий в тему
+* курс "Автоматное программирование" о конечных автоматах, чем является промис
