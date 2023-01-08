@@ -515,3 +515,61 @@ promise
 * описание стандарта, который имплементируется в упражнении
 * курс "Синхронная асинхронность", чуть глубже погружающий в тему
 * курс "Автоматное программирование" о конечных автоматах, чем является промис
+
+## Task #23 - Waterfall
+В библиотеке async есть функция waterfall(), которая позволяет строить цепочки асинхронных функций без необходимости вкладывать их друг в друга. Подробнее о том как она работает, посмотрите в документации. Попробуйте решить данное упражнение с применением этой функции.
+
+Реализуйте и экспортируйте асинхронную функцию unionFiles(), которую мы рассматривали в предыдущих уроках. Вот её обычное решение на колбеках:
+
+Примеры
+```
+import fs from 'fs';
+
+const unionFiles = (inputPath1, inputPath2, outputPath, cb) => {
+  fs.readFile(inputPath1, 'utf-8', (error1, data1) => {
+    if (error1) {
+      cb(error1);
+      return;
+    }
+    fs.readFile(inputPath2, 'utf-8', (error2, data2) => {
+      if (error2) {
+        cb(error2);
+        return;
+      }
+      fs.writeFile(outputPath, `${data1}${data2}`, (error3) => {
+        if (error3) {
+          cb(error3);
+          return;
+        }
+        cb(null); // не забываем последний успешный вызов
+      });
+    });
+  });
+};
+```
+### Подсказки
+* Попробуйте написать её, используя указанную выше функцию waterfall.
+* Статья с разбором Waterfall
+
+## Task #24 - Waterfall
+Реализуйте функцию waterfall из библиотеки async
+
+```
+waterfall([
+  (cb) => {
+    fs.readFile(dataPath1, 'utf-8', (_error1, data1) => cb(_error1, data1))
+  },
+  (data1, cb) => {
+    fs.readFile(dataPath2, 'utf-8', (_error2, data2) => cb(_error2, data1, data2))
+  },
+  (data1, data2, cb) => {
+    fs.writeFile(outputPath, `${data1}${data2}`, (_error3) => cb(_error3, `${data1}${data2}`))
+  },
+], (error, result) => {
+  if (error) {
+    console.error(error);
+    return;
+  }
+  console.log('success: ', result);
+})
+```
