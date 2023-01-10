@@ -1,7 +1,7 @@
 class Stack {
   constructor(values) {
     try {
-      if (isIterable(values)) {
+      if (this.#isIterable(values)) {
         this.values = values;
       } else {
         this.values = [values];
