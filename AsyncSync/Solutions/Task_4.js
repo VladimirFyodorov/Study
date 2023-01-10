@@ -86,11 +86,3 @@ const dispatcher = ({ method, data, url, params, headers }) => {
     })
   }
 };
-
-const myurl = 'url';
-const myconfig = { header: 'header'}
-const obj = { ...myconfig, url: myurl, method: 'GET' };
-const { url, method, ...config } = obj;
-console.log(url);
-console.log(method);
-console.log(config);
