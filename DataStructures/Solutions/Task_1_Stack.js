@@ -1,10 +1,22 @@
 class Stack {
   constructor(values) {
     try {
-      this.values = [...values];
-    } catch {
-      this.values = [values];
+      if (isIterable(values)) {
+        this.values = values;
+      } else {
+        this.values = [values];
+      }
+    } catch (e) {
+      console.error(e);
     }
+  }
+
+  #isIterable(input) {  
+    if (input === null || input === undefined) {
+      return false
+    }
+  
+    return typeof input[Symbol.iterator] === 'function';
   }
 
   pop = () => {
