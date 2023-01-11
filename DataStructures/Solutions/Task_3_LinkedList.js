@@ -60,7 +60,7 @@ class LinkedList {
       iter(position - 1, nthNode.nextNode);
     }
     iter(position, this.head)
-  } // [1,2,3]
+  }
 
   get = (position = 0) => {
 
@@ -74,11 +74,22 @@ class LinkedList {
   includes = (element) => {
     
   }
+
   reverse = () => {
-    
+    const iter = (node, prevNode) => {
+      if (!node) {
+        this.head = prevNode;
+        return;
+      }
+      const { nextNode } =  node;
+      node.nextNode = prevNode;
+      iter(nextNode, node);
+    };
+    iter(this.head, undefined);
   }
 };
 
-const ll = new LinkedList([1, 2]);
-ll.insert(4, 0);
-console.log(ll.head);
+const ll = new LinkedList([1, 2, 3]);
+console.log(JSON.stringify(ll.head));
+ll.reverse();
+console.log(JSON.stringify(ll.head));
