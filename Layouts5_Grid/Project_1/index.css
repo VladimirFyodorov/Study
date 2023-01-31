@@ -1,0 +1,94 @@
+@font-face {
+  font-family: raleway;
+  src: url("../src/fonts/Raleway-Bold.ttf");
+}
+
+:root {
+  --color-gray: #dfe2d9;
+  --color-dark: #333;
+  --font-style: raleway, sans-serif;
+  --vertical-line-height: 25vh;
+}
+
+body {
+  box-sizing: border-box;
+  width: 715px;
+  margin: 0 auto;
+  padding: 20px 0 calc(var(--vertical-line-height) / 2);
+
+  color: var(--color-dark);
+  font-family: var(--font-style);
+  line-height: 1.7;
+
+  background: var(--color-gray);
+}
+
+p {
+  margin: 0;
+
+  font-weight: bold;
+}
+
+h1 {
+  margin: 0;
+
+  font-size: 80px;
+}
+
+/* BEGIN (write your solution here) */
+.grid {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(5, 85px);
+  justify-content: flex-end;
+  grid-gap: 40px 55px;
+}
+
+.column-3 {
+  grid-column: 3 span;
+}
+
+.column-2 {
+  grid-column: 2 span;
+}
+
+.column-5 {
+  grid-column: 5 span;
+}
+
+.column-main {
+  height: 25vh;
+  opacity: 0.7;
+  width: 85px;
+}
+
+.column-double {
+  height: 50vh;
+  opacity: 0.7;
+  width: 85px;
+}
+
+.second-grid {
+  position: absolute;
+  grid-row: 3;
+  top: calc(25vh/2);
+
+  display: grid;
+  grid-template-columns: repeat(5, 85px);
+  justify-content: flex-start;
+  grid-gap: 40px 55px;
+}
+/* END */
+
+.blue {
+  background: #0271a1;
+}
+
+.orange {
+  background: #f37022;
+}
+
+.pink {
+  background: #cd0076;
+}
