@@ -1,5 +1,9 @@
 {
     "type": "module",
+    "scripts": {
+        "build": "sass ./Layouts6_Sass/index.scss ./Layouts6_Sass/index.css",
+        "shell": "sass -i"
+    },
     "devDependencies": {
         "@hexlet/immutable-fs-trees": "^0.7.1",
         "lodash": "^4.17.21"
