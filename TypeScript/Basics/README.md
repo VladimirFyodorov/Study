@@ -88,4 +88,12 @@ getParams('name=hexlet&count=3&order=asc');
 ```
 Эту задачу лучше всего решать через метод reduce()
 
-## Task #11 - 
+## Task #11 - Система модулей
+Реализуйте namespace Company в котором экспортируется функция isEmployeeEmail(). Функция принимает почту и домен. Если емейл пользователя содержит указанный домен, то функция возвращает true:
+```
+Company.isEmployeeEmail('tirion@hexlet.io', 'hexlet.io');
+// true
+
+Company.isEmployeeEmail('user@example.com', 'hexlet.io');
+// false
+```
