@@ -71,7 +71,12 @@ const modal = buildModal('hexlet forever', ModalStatus.Opened);
 // { text: 'hexlet forever', status: ModalStatus.Opened }
 ```
 
-## Task #9 - 
+## Task #9 - Type Aliases
+Реализуйте функцию getOlderUser(), которая принимает на вход двух пользователей и возвращает того, который старше. Если пользователи - ровесники, то возвращает null:
+```
+const user1 = { name: 'Petr', age: 8 };
+```
+Определите для пользователя псевдоним, чтобы не дублировать определение его типа в параметрах функции.
 
 ## Task #10 - 
 
