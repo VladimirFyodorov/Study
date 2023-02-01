@@ -59,7 +59,17 @@ const course = {
 isComplete(course); // false
 ```
 
-## Task #8 - 
+## Task #8 - Enums
+1. Реализуйте перечисление ModalStatus, с двумя значениями: Opened и Closed.
+2. Реализуйте функцию buildModal(), которая возвращает объект, описывающий собой модальное окно. Параметры функции:
+* Текст, который должен быть внутри окна после инициализации
+* Статус, с которым надо создать объект окна
+
+Функция возвращает объект с двумя полями: text (тут хранится переданный текст) и status (тут хранится переданный статус)
+```
+const modal = buildModal('hexlet forever', ModalStatus.Opened);
+// { text: 'hexlet forever', status: ModalStatus.Opened }
+```
 
 ## Task #9 - 
 
