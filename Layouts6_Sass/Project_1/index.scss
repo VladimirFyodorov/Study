@@ -1,0 +1,17 @@
+@function fib($n, $n1: 0, $n2: 1) {
+  @if ($n == 0) { // started from 0 => return zero
+    @return 0;
+  }
+
+  @if ($n == 1) { // end
+    @return $n2;
+  }
+
+  @return fib($n - 1, $n2, $n1 + $n2);
+}
+
+@debug fib(1); // 1
+@debug fib(3); // 2
+@debug fib(5); // 5
+@debug fib(15); //610
+@debug fib(0); //0
