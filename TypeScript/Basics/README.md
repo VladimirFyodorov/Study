@@ -48,7 +48,16 @@ filterAnagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']);
 filterAnagrams('laser', ['lazing', 'lazy',  'lacer']);
 // []
 ```
-## Task #7 - 
+## Task #7 - Объектные типы
+Реализуйте функцию isComplete(), которая принимает на вход курс и определяет завершен ли он. Завершенным считается курс, в который добавлено 4 или более уроков:
+```
+// Определите тип исходя из структуры объекта
+const course = {
+  name: 'Java',
+  lessons: ['variables', 'functions', 'conditions'],
+};
+isComplete(course); // false
+```
 
 ## Task #8 - 
 
