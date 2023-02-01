@@ -1,0 +1,26 @@
+@use "sass:math";
+@use "sass:list";
+
+$rem-base: 16px;
+
+// BEGIN (write your solution here)
+@function px-to-rem($list) {
+  $res: ();
+
+  @each $px in $list {
+    $res: append($res, math.div($px, $rem-base)*1rem)
+  }
+
+  @return '#{$res}';
+}
+
+
+.px-20 {
+  padding-left: px-to-rem(20px);
+  padding-right: px-to-rem(20px);
+}
+ 
+.card {
+  padding: px-to-rem(20px 15px 30px 45px);
+}
+// END
