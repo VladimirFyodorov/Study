@@ -1,0 +1,41 @@
+.bg-primary {
+  background: #f5e6e8;
+}
+
+.text-primary {
+  color: #f5e6e8;
+}
+
+.bg-secondary {
+  background: #d5c6e0;
+}
+
+.text-secondary {
+  color: #d5c6e0;
+}
+
+.bg-success {
+  background: #aaa1c8;
+}
+
+.text-success {
+  color: #aaa1c8;
+}
+
+.bg-info {
+  background: #967aa1;
+}
+
+.text-info {
+  color: #967aa1;
+}
+
+.bg-warning {
+  background: #192a51;
+}
+
+.text-warning {
+  color: #192a51;
+}
+
+/*# sourceMappingURL=index.css.map */

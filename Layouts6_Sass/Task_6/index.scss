@@ -1,0 +1,29 @@
+@use "sass:map";
+@use "sass:string";
+
+$theme-colors: (
+  "primary":    ("light": "#f5e6e8", "dark": "#1b262c"),
+  "secondary":  ("light": "#d5c6e0", "dark": "#0f4c75"),
+  "success":    ("light": "#aaa1c8", "dark": "#3282b8"),
+  "info":       ("light": "#967aa1", "dark": "#f9f9f9"),
+  "warning":    ("light": "#192a51", "dark": "#bbe1fa"),
+);
+
+// BEGIN (write your solution here)
+@mixin colors($theme-colors, $tone: "light") {
+  @each $color-name, $colors in $theme-colors {
+    $name: unquote($color-name);
+    $color: unquote(map.get($colors, $tone));
+
+    .bg-#{$name} {
+      background: $color;
+    }
+
+    .text-#{$name} {
+      color: $color;
+    }
+  }
+}
+
+@include colors($theme-colors);
+// END
