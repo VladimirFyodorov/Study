@@ -77,6 +77,11 @@ max(1,2,3);
 max(234);
 ```
 
-## Task #8 - 
+## Task #8 - Перегрузка функций (Function Overloads)
+Реализуйте и экспортируйте по умолчанию функцию sayHello(), которая аналогична примеру на Kotlin из теории:
+```
+sayHello('John'); // Hi John
+sayHello('Mila', 'Mala'); // Hello Mila Mala
+```
 
 ## Task #9 - 
