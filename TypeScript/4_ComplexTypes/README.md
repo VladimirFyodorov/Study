@@ -34,9 +34,16 @@ makeTurn('right');
 console.log(state); // [null, null, 'turtle', null, null]
 ```
 
-## Task #5 - 
+## Task #5 - Пересечение (Intersections Types)
+Создайте там заказа состоящий из status = 'Created' и cost = 100. Создайте этот тип через пересечение типов.
 
-## Task #6 - 
+```
+const myOrder: OneHundredOrder = {
+    status: 'Created',
+    cost: 100
+}
+```
+## Task #6 - Присвоение значения
 
 ## Task #7 - 
 
