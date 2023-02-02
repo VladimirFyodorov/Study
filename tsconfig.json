@@ -5,10 +5,10 @@
     "removeComments": false,
     "sourceMap": true,
     "target": "es6",
-    "outDir": "./TypeScript/Basics/dist"
+    "outDir": "TypeScript/1_Basics/dist"
   },
   "include": [
     // "scripts/**/*"
-    "./TypeScript/Basics/**/*"
+    "TypeScript/1_Basics/**/*"
   ]
 }
