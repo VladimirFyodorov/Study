@@ -21,7 +21,18 @@ formatPrice(); // '$0.00'
 formatPrice(null); // '$0.00'
 ```
 
-## Task #4 - 
+## Task #4 - Литералы (Literal Types)
+Реализуйте функцию makeTurn(), принимающую строку left или right и перемещающую черепашку вперед-назад по одномерной карте длиной пять. Если ход невозможен, должно выброситься исключение.
+```
+const { makeTurn, state } = startGame();
+console.log(state); // ['turtle', null, null, null, null]
+
+makeTurn('left') // ERROR
+
+makeTurn('right');
+makeTurn('right');
+console.log(state); // [null, null, 'turtle', null, null]
+```
 
 ## Task #5 - 
 
