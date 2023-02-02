@@ -12,7 +12,14 @@ lastIndex(str, 't'); // 3
 lastIndex(str, 'p'); // null
 ```
 
-## Task #3 - 
+## Task #3 - Null и Undefined
+Реализуйте функцию formatPrice(), которая принимает число и возвращает строку с округлением до второго числа после запятой, если пришел null или undefined должна вернуться '$0.00'.
+```
+formatPrice(3.145); // '$3.15'
+formatPrice(200); // '$200.00'
+formatPrice(); // '$0.00'
+formatPrice(null); // '$0.00'
+```
 
 ## Task #4 - 
 
