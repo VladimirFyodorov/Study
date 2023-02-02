@@ -58,7 +58,26 @@ sort(arr, comparator) // Error: Type 'number' is not assignable to type '0 | 1 |
 //  
 ```
 
-## Task #8 - 
+## Task #8 - Структурная типизация
+```
+type IntersectionUser = {
+  username: string;
+  password: string;
+} & {
+    type: string;
+}
+
+const admin: IntersectionUser = { username: 'test', password: 'test', type: 'admin' } // требуется совпадение c объектным типом и слева и справа от оператора &
+
+type UnionUser = {
+    username: string;
+    password: string;
+} | {
+    type: string;
+}
+
+const user: UnionUser = { username: 'test', type: 'user' } // достаточно совпадения с одним из объектных типов
+```
 
 ## Task #9 - 
 
