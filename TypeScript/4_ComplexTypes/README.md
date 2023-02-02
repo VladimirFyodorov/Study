@@ -79,5 +79,6 @@ type UnionUser = {
 const user: UnionUser = { username: 'test', type: 'user' } // достаточно совпадения с одним из объектных типов
 ```
 
-## Task #9 - 
+## Task #9 - Ковариантность и контрвариантность
+
 
