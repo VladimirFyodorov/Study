@@ -353,3 +353,31 @@ displayHistogram(13, rollDie);
 //    -----------------------
 //     1   2   3   4   5   6
 ```
+
+## Task #18 - Cashing
+Сделайте функцию - обёртку, которая принимает любую функцию и кеширует её.
+Кэшируемая функция:
+* Аргументы могут быть любые - используйте arguments
+* Сохраните контекст вызова
+
+Кэширующая функция:
+* Первый аргумент - кэшируемая функция
+* Второй аргумент - функция для хеширования ключа (из N агрументов сделать один ключ)
+
+```
+let worker = {
+  slow(min, max) {
+    alert(`Called with ${min},${max}`);
+    return min + max;
+  }
+};
+
+function hash() {
+  return [].join.call(arguments);
+}
+
+worker.slow = cachingDecorator(worker.slow, hash);
+
+console.log( worker.slow(3, 5) ); // работает
+console.log( "Again " + worker.slow(3, 5) ); // аналогично (из кеша)
+```
