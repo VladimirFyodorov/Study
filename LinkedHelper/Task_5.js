@@ -142,50 +142,103 @@ class MyClass6 extends MyClass5 {
     }
 };
 
-/// Для функций конструкторов нет хорошего способа это делать, так как при обращении к this.__proto__ будет 
-// происхоить зацикливание при наследовании во втором поколении
 
-function GrandParent() {}
-GrandParent.prototype.getAge = function() {
-    // console.log('name: ', this.name);
-    return 80;
+function MyClassFn6() {
+    MyClassFn5.call(this);
 }
 
-// GrandParent.prototype.name = 'grand parent';
-
-function Parent() {
-    this.getAge = function() {
-        return this.__proto__.getAge();
+MyClassFn6.prototype = {
+    ...MyClassFn6.prototype,
+    returnName() {
+        const name = super.returnName();
+        return `${name} ${name}`;
     }
 }
 
-Parent.prototype.getAge = function() {
-    // console.log('name: ', this.name);
-    return this.__proto__.getAge()/2;
+Object.setPrototypeOf(MyClassFn6.prototype, MyClassFn5.prototype);
+Object.setPrototypeOf(MyClassFn6, MyClassFn5);
+
+// console.log(new MyClass5().returnName()); // name
+// console.log(new MyClass6().returnName()); // name name
+
+// console.log(new MyClassFn5().returnName()); // name
+// console.log(new MyClassFn6().returnName()); // name name
+
+
+
+// another example with Super
+
+function GrandParent() {}
+
+GrandParent.prototype.getAge = function() {
+    return 80;
 }
 
-// Parent.prototype.name = 'parent';
+function Parent() {}
+
+Parent.prototype = {
+    ...Parent.prototype,
+    getAge() {
+        return super.getAge()/2;
+    }
+};
+
 Object.setPrototypeOf(Parent.prototype, GrandParent.prototype);
 
 
-function Child() {
-    Parent.call(this);
-}
+function Child() {}
 
-Child.prototype.getAge = function() {
-    // console.log('name: ', this.name);
-    return this.__proto__.getAge()/4;
-}
-
-// Child.prototype.name = 'child';
+Child.prototype = {
+    ...Child.prototype,
+    getAge() {
+        return super.getAge()/4;
+    }
+};
 Object.setPrototypeOf(Child.prototype, Parent.prototype);
 
-const grandParent = new GrandParent();
-const parent = new Parent();
-const child = new Child();
-
-console.log(grandParent.getAge());
-console.log(parent.getAge());
-console.log(child.getAge());
+console.log(new GrandParent().getAge());
+console.log(new Parent().getAge());
+console.log(new Child().getAge());
 
 
+
+/// Ещё пример
+
+
+
+function Animal() {
+    this.name = "Животное";
+}
+Animal.prototype.eat = function() {         // animal.eat.[[HomeObject]] == animal
+    console.log(`${this.name} ест.`);
+}
+
+function Rabbit() {
+    this.name = "Кролик";
+}
+
+Rabbit.prototype = {
+    ...Rabbit.prototype,
+    eat() {         // rabbit.eat.[[HomeObject]] == rabbit
+        super.eat();
+    }
+}
+
+Object.setPrototypeOf(Rabbit.prototype, Animal.prototype);
+
+function LongEar() {
+    this.name = "Длинноух";
+}
+
+LongEar.prototype = {
+    ...LongEar.prototype,
+    eat() {         // rabbit.eat.[[HomeObject]] == rabbit
+        super.eat();
+    }
+}
+
+Object.setPrototypeOf(LongEar.prototype, Rabbit.prototype);
+
+// new Animal().eat();
+// new Rabbit().eat();
+// new LongEar().eat();
