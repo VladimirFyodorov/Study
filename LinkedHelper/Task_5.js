@@ -147,8 +147,11 @@ class MyClass6 extends MyClass5 {
 
 function GrandParent() {}
 GrandParent.prototype.getAge = function() {
+    // console.log('name: ', this.name);
     return 80;
 }
+
+// GrandParent.prototype.name = 'grand parent';
 
 function Parent() {
     this.getAge = function() {
@@ -157,9 +160,11 @@ function Parent() {
 }
 
 Parent.prototype.getAge = function() {
+    // console.log('name: ', this.name);
     return this.__proto__.getAge()/2;
 }
 
+// Parent.prototype.name = 'parent';
 Object.setPrototypeOf(Parent.prototype, GrandParent.prototype);
 
 
@@ -168,9 +173,11 @@ function Child() {
 }
 
 Child.prototype.getAge = function() {
+    // console.log('name: ', this.name);
     return this.__proto__.getAge()/4;
 }
 
+// Child.prototype.name = 'child';
 Object.setPrototypeOf(Child.prototype, Parent.prototype);
 
 const grandParent = new GrandParent();
