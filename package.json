@@ -11,6 +11,7 @@
         "lodash": "^4.17.21"
     },
     "dependencies": {
+        "@type-challenges/utils": "^0.1.1",
         "@types/node": "^18.11.18",
         "async": "^3.2.4",
         "axios": "^1.2.2",
